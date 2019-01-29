@@ -6,6 +6,7 @@
 	"js": [
 		"bower_components/jquery/dist/jquery.min.js",
 		"_plugins/jquery.themepunch.tools.min.js",
+		"_plugins/bgimg.js",
 		"_plugins/jquery.themepunch.revolution.min.js",
 		"_plugins/rev.extensions/revolution.extension.actions.min.js",
 		"_plugins/rev.extensions/revolution.extension.carousel.min.js",

@@ -1,1 +1,113 @@
 .sunway-home-1
+	.rev_slider_wrapper, .tp-bgimg, .slotslide, .slot, .slotholder
+		@media screen and (min-width: 1200px)
+			height: 662px !important
+		.tp-revslider-slidesli
+			height: 100% !important
+		div
+			@media screen and (min-width: 1200px)
+				height: 662px !important
+	.tp-bannertimer
+		display: none
+	.wrapper
+		display: flex
+		// background: #2a2c2d
+		position: relative
+		flex-wrap: wrap
+		@media screen and (min-width: 992px)
+			margin-top: -22px
+		&:after, &:before
+			position: absolute
+			bottom: 0
+			display: block
+			width: 100%
+			background: #b10a12
+			right: 100%
+			content: ''
+		&:after
+			width: 1000%
+			height: 3px
+			right: auto
+			left: -27rem
+			z-index: -1
+		&:before
+			height: 100%
+			left: 95%
+			right: auto
+			@media screen and (max-width: 992px)
+				display: none
+		.block-img
+			margin-top: auto
+			display: flex
+			align-items: center
+			flex: 0 0 35%
+			padding: r(22px) r(32px)
+			padding-left: 0
+			height: calc(100% - 22px)
+			@media screen and (max-width: 1200px)
+				flex: 0 0 43%
+			@media screen and (max-width: 992px)
+				flex: 0 0 100%
+			@media screen and (max-width: $xs)
+				flex-direction: column
+			img
+				max-width: 100%
+				+ img
+					margin-top: 1rem
+				@media screen and (min-width: 376px)
+					+ img
+						margin-top: 0
+						margin-left: r(50px)
+			&:after
+				background: #2a2c2d
+				position: absolute
+				bottom: 0
+				display: block
+				height: calc(100% - 22px)
+				right: 100%
+				content: ''
+				width: 1000%
+				right: auto
+				left: -27rem
+				z-index: -1
+				@media screen and (max-width: 992px)
+					height: 100%
+
+
+		.block-title
+			flex: 0 0 65%
+			padding: r(24px) r(37px)
+			width: 100%
+			background: #b10a12
+			position: relative
+			color: color-get($mau,trang)
+			text-transform: uppercase
+			@media screen and (max-width: 1200px)
+				flex: 0 0 57%
+			@media screen and (max-width: 992px)
+				flex: 0 0 100%
+				padding: r(20px) r(37px)
+				padding-left: 0
+			h2
+				font-size: r(30px)
+				font-weight: 600
+				@media screen and (max-width: $md)
+					font-size: 1.2rem
+			h3
+				font-size: r(20px)
+				font-weight: normal
+				@media screen and (max-width: $md)
+					font-size: 1rem
+			&:after
+				height: 100%
+				position: absolute
+				bottom: 1px
+				left: r(-57px)
+				display: block
+				content: url('../img/_global/home_layout.png')
+				@media screen and (max-width: 992px)
+					content: ''
+					left: -15rem
+					width: 1000%
+					z-index: -1
+					background: #b10a12

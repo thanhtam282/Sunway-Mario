@@ -1,5 +1,9 @@
 .fas:before, .fab:before
 	+faws('\f002', $faf, 900)
+.fab:before
+	+faws('\f002', $fab, 900)
+.mdi:before
+	+mtrl('\f1ee')
 
 .far
 	font-weight: 400
@@ -29,17 +33,19 @@
 
 
 
-.mdi.mdi-email:before
-	+mtrl('\f1ee')
-.mdi.mdi-calendar:before
-	+mtrl('\f0ed')
-.mdi.mdi-arrow-right:before
-	+mtrl('\f054')
-.mdi.mdi-arrow-left:before
-	+mtrl('\f04d')
-.mdi.mdi-menu:before
-	+mtrl('\f35c')
-.mdi.mdi-magnify:before
-	+mtrl('\f349')
-.mdi.mdi-account-circle:before
-	+mtrl('\f009')
+.mdi-email:before
+	content: '\f1ee'
+.mdi-calendar:before
+	content: '\f0ed'
+.mdi-arrow-right:before
+	content: '\f054'
+.mdi-arrow-left:before
+	content: '\f04d'
+.mdi-menu:before
+	content: '\f35c'
+.mdi-magnify:before
+	content: '\f349'
+.mdi-account-circle:before
+	content: '\f009'
+.mdi-menu:before
+	content: '\f35c'

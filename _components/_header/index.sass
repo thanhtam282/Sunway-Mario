@@ -1,9 +1,31 @@
 header
 	// overflow: hidden
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 9
+	background: color-get($mau, trang)
+	box-shadow: 0 5px 13px 0 rgba(0,0,0,.08)
+	.toggle-menu
+		display: none
 	.menu-bar
 		display: flex
 		.logo
 			+f-center
+			a
+
+				img
+					height: r(70px)
+					transition: .4s all ease-in-out
+			&.active
+				a
+					display: flex
+					height: 100%
+					padding: 7px
+					width: 100%
+					img
+						height: r(28px)
+
 		.nav_wrapper
 			width: 100%
 			.top_nav
@@ -22,6 +44,9 @@ header
 						color: #c1c1c1
 					button
 						border: 0
+						cursor: pointer
+						&:hover, &:active, &:focus
+							outline: none
 						i
 							font-size: r(15px)
 							color: color-get($mau,main)
@@ -45,13 +70,6 @@ header
 						background: color-get($mau, main)
 					.wrapper
 						position: relative
-						&:after
-							position: absolute
-							top: 50%
-							display: block
-							width: 100%
-							height: 100%
-							content: ''
 						a
 							font-size: r(15px)
 							color: color-get($mau,main)
@@ -100,7 +118,7 @@ header
 					li
 						font-size: r(15px)
 						// font-weight: 500
-						padding: r(15px) r(50px)
+						padding: r(10px) r(50px)
 						background: color-get($mau, main)
 						position: relative
 						&:first-child
@@ -115,6 +133,12 @@ header
 								right: 100%
 								background: color-get($mau, main)
 								content: ''
+							&:after
+								position: absolute
+								top: 0
+								left: -33px
+								display: block
+								content: url('../img/_global/header_layout.png')
 						&:last-child
 							padding-right: 0
 						a
@@ -124,17 +148,127 @@ header
 							transition: .3s all ease-in-out
 							color: color-get($mau,trang)
 							&:hover, &.active
-								color: color-get($mau,light)
-								&:after
-									opacity: 1
-									bottom: r(-24px)
+								@media screen and (min-width: 992px)
+									color: color-get($mau,light)
+									&:after
+										opacity: 1
+										bottom: r(-19px)
 							&:after
 								transition: .3s all ease-in-out
 								opacity: 0
 								color: color-get($mau,light)
 								position: absolute
-								bottom: r(-74px)
+								bottom: r(-29px)
 								display: block
 								left: 50%
 								transform: translateX(-50%)
 								+faws('\f0de', $faf, 900)
+	@media screen and (max-width: 1199px)
+		.menu-bar
+			.nav_wrapper
+				.bottom_nav
+					ul
+						li
+							padding: r(10px) r(30px)
+							&:first-child
+								padding-left: r(30px)
+	@media screen and (max-width: 991px)
+		.toggle-menu
+			color: color-get($mau,main)
+			display: block
+			margin-left: auto
+			span
+				font-size: r(28px)
+		.bg-overlay
+			transition: .5s all ease-in-out
+			position: fixed
+			top: r(42px)
+			left: -100%
+			background: rgba(0,0,0,0.8)
+			height: 100%
+			width: calc(100% - 320px)
+			&.active
+				left: 0
+		.menu-bar
+			.logo
+				max-height: r(42px)
+				a
+					display: flex
+					height: 100%
+					padding: 7px
+					width: 100%
+					img
+						height: r(28px)
+
+			.nav_wrapper
+				z-index: 9
+				position: fixed
+				transition: .5s all ease-in-out
+				right: -100%
+				top: r(42px)
+				max-width: r(320px)
+				background: color-get($mau, main)
+				height: 100%
+				&.active
+					right: 0
+				.top_nav
+					padding: r(20px) r(20px) 
+					padding-bottom: r(10px)
+					.searchbox
+						input
+							background: transparent
+							color: color-get($mau,trang)
+						::-webkit-input-placeholder
+							color: color-get($mau,trang)
+
+						button
+							background: transparent
+							i
+								color: color-get($mau,trang)
+					.language
+						.wrapper
+							a
+								color: color-get($mau,trang)
+							.drop-down
+								a
+									color: color-get($mau,main)
+
+				.bottom_nav
+					ul
+						flex-direction: column
+						&:after
+							display: none
+						li
+							padding: 1rem r(20px)
+							&:first-child
+								margin-left: initial
+								padding-left: r(20px)
+								&:before, &:after
+									display: none
+							&:last-child
+								padding-right: r(20px)
+							a
+								text-align: right
+								&.active
+									color: color-get($mau,trang)
+									&:after
+										content: ''
+										background: color-get($mau, trang)
+										bottom: -3px !important
+										width: 100%
+										height: 1px
+										opacity: 1
+	@media screen and (max-width: 576px)
+		.menu-bar
+			.nav_wrapper
+				.top_nav
+					.searchbox
+						width: 68%
+						input
+							width: calc(100% - 21px)
+	@media screen and (max-width: 400px)
+		.bg-overlay
+			display: none
+		.menu-bar
+			.nav_wrapper
+				max-width: 100%

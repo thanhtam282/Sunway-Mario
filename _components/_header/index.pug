@@ -3,6 +3,8 @@ header.header
 		.logo
 			a(href="#")
 				img(src="./img/_global/logo.png", alt="")
+		a.toggle-menu(href="javascript:void(0)")
+			span.mdi.mdi-menu
 		.nav_wrapper
 			.top_nav
 				.searchbox
@@ -20,7 +22,7 @@ header.header
 			.bottom_nav
 				ul.nav
 					li.nav-item
-						a(href="#").nav-link Home
+						a(href="#").nav-link.active Home
 					li.nav-item
 						a(href="#").nav-link About us
 					li.nav-item
@@ -31,3 +33,4 @@ header.header
 						a(href="#").nav-link Career
 					li.nav-item
 						a(href="#").nav-link Contact
+	.bg-overlay

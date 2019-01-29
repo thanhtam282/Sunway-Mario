@@ -3,7 +3,7 @@ $(document).ready(() => {
 	$("#revSlider1").revolution({
 		sliderType: "standard",
 		sliderLayout: "auto",
-		delay: 9000,
+		delay: 3000,
 		gridHeight: "auto"
 	});
 });

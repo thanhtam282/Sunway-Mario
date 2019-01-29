@@ -1,0 +1,109 @@
+footer
+	padding-top: r(20px)
+	.offset-1
+		@media screen and (min-width: 1200px)
+			padding-left: 6.3%
+	.offset-2
+		@media screen and (min-width: 1200px)
+			padding-left: r(58px)
+	p
+		position: relative
+		padding: 3px 0
+		font-weight: 300
+		&:before
+			+mtrl('\f1ee')
+			margin-right: 5px
+	.address
+		display: flex
+		&:before
+			padding-top: 3px
+			content: '\f34e'
+	.phone:before
+		content: '\f3f2'
+	.fax:before
+		content: '\f42a'
+	.contact:before
+		content: '\f004'
+	h3
+		text-transform: uppercase
+		color: color-get($mau,trang)
+		padding-top: r(30px)
+		padding-bottom: 10px
+		font-weight: 600
+		font-size: r(15px)
+		&.copy
+			padding: r(13px) 0
+			background: color-get($mau, main)
+			text-align: center
+			font-size: r(13px)
+			font-weight: normal
+	p
+		color: rgba(255,255,255,0.6)
+		font-size: r(14px)
+	ul
+		list-style: none
+		li
+			a
+				font-weight: 300
+				color: rgba(255,255,255,0.6)
+				font-size: r(14px)
+				transition: .3s all ease-in-out
+				position: relative
+				padding-left: 11px
+				&:after
+					top: 50%
+					transform: translateY(-50%)
+					left: 0
+					position: absolute
+					+faws('\f0da', $faf, 900)
+
+				&:hover
+					text-decoration: none
+					@media screen and (max-width: 991px)
+						color: rgba(255,255,255,0.6)
+					@media screen and (min-width: 992px)
+						color: color-get($mau,trang)
+	.form-group
+		padding-top: r(10px)
+		display: flex
+		input
+			border: 2px solid rgba(255,255,255,.2)
+			border-right: 0
+			background: transparent
+			color: rgba(255,255,255,.2)
+			padding: 6px r(19px)
+			border-top-left-radius:  5px
+			border-bottom-left-radius:  5px
+			&:hover, &:active, &:focus
+				outline: none
+		::-webkit-input-placeholder
+			color: rgba(255,255,255,.2)
+			font-style: italic
+
+		.subscribebutton
+			background: #e7222f
+			display: flex
+			border-top-right-radius:  5px
+			border-bottom-right-radius:  5px
+			&:hover
+				text-decoration: none
+			span
+				+f-center
+				font-size: 1.2rem
+				padding: 0 r(12px) 
+				color: color-get($mau,trang)
+	.social-wrapper
+		padding-top: 1rem
+		display: flex
+		margin: 0 -12px
+		a
+			padding: 0 r(12px)
+			transition: .3s all ease-in-out
+			color: color-get($mau,trang)
+			@media screen and (min-width: 992px)
+				color: rgba(255,255,255,.2)
+			&:hover
+				@media screen and (min-width: 992px)
+					color: color-get($mau,trang)
+	section
+		margin-top: r(43px)
