@@ -1,0 +1,25 @@
+{
+	"css": [
+		"_plugins/grid.css",
+		"_plugins/rev.css/*.css"
+	],
+	"js": [
+		"bower_components/jquery/dist/jquery.min.js",
+		"_plugins/jquery.themepunch.tools.min.js",
+		"_plugins/jquery.themepunch.revolution.min.js",
+		"_plugins/rev.extensions/revolution.extension.actions.min.js",
+		"_plugins/rev.extensions/revolution.extension.carousel.min.js",
+		"_plugins/rev.extensions/revolution.extension.layeranimation.min.js",
+		"_plugins/rev.extensions/revolution.extension.navigation.min.js",
+		"_plugins/rev.extensions/revolution.extension.slideanims.min.js",
+		"_plugins/rev.extensions/revolution.extension.kenburn.min.js",
+		"_plugins/rev.extensions/revolution.extension.parallax.min.js",
+		"_plugins/rev.extensions/revolution.extension.migration.min.js",
+		"_plugins/rev.extensions/revolution.extension.video.min.js"
+	],
+	"font": [
+		"bower_components/mdi/fonts/*",
+		"bower_components/font-awesome/webfonts/*",
+		"bower_components/linearicons/dist/web-font/fonts/*"
+	]
+}

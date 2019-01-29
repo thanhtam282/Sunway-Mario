@@ -1,0 +1,140 @@
+header
+	// overflow: hidden
+	.menu-bar
+		display: flex
+		.logo
+			+f-center
+		.nav_wrapper
+			width: 100%
+			.top_nav
+				padding: r(12px) 0
+				display: flex
+				.searchbox
+					margin-left: auto
+					color: #c1c1c1
+					font-size: r(14px)
+					border-bottom: 1px solid #c1c1c1
+					input
+						border: 0
+						&:hover, &:active, &:focus
+							outline: none
+					::-webkit-input-placeholder
+						color: #c1c1c1
+					button
+						border: 0
+						i
+							font-size: r(15px)
+							color: color-get($mau,main)
+
+
+				.language
+					padding-left: 1rem
+					margin-left: 1rem
+					z-index: 1
+					// border-left: 1px solid color-get($mau,main)
+					position: relative
+					&:after
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						display: block
+						width: 1px
+						height: 60%
+						left: -1px
+						content: ''
+						background: color-get($mau, main)
+					.wrapper
+						position: relative
+						&:after
+							position: absolute
+							top: 50%
+							display: block
+							width: 100%
+							height: 100%
+							content: ''
+						a
+							font-size: r(15px)
+							color: color-get($mau,main)
+							span
+								margin-left: 5px
+							&:hover
+								text-decoration: none
+						.drop-down
+							position: absolute
+							top: 100%
+							border-radius: 5px
+							left: 50%
+							transform: translateX(-50%)
+							background: color-get($mau, trang)
+							border: 1px solid color-get($mau,main)
+							a
+								display: block
+								padding: .25rem 1rem
+								position: relative
+								&:hover
+									@media screen and (min-width: 992px)
+										text-decoration: underline !important
+								&:first-child
+									&:after
+										position: absolute
+										bottom: 0
+										display: block
+										width: 70%
+										background: color-get($mau, main)
+										height: 1px
+										left: 50%
+										transform: translateX(-50%)
+										content: ''
+			.bottom_nav
+				ul
+					position: relative
+					&:after
+						position: absolute
+						top: 0
+						display: block
+						width: 100%
+						height: 100%
+						left: 100%
+						background: color-get($mau, main)
+						content: ''
+					li
+						font-size: r(15px)
+						// font-weight: 500
+						padding: r(15px) r(50px)
+						background: color-get($mau, main)
+						position: relative
+						&:first-child
+							margin-left: auto
+							padding-left: r(90px)
+							&:before
+								position: absolute
+								bottom: 0
+								display: block
+								width: 1000%
+								height: 3px
+								right: 100%
+								background: color-get($mau, main)
+								content: ''
+						&:last-child
+							padding-right: 0
+						a
+							padding: 0
+							position: relative
+							text-transform: uppercase
+							transition: .3s all ease-in-out
+							color: color-get($mau,trang)
+							&:hover, &.active
+								color: color-get($mau,light)
+								&:after
+									opacity: 1
+									bottom: r(-24px)
+							&:after
+								transition: .3s all ease-in-out
+								opacity: 0
+								color: color-get($mau,light)
+								position: absolute
+								bottom: r(-74px)
+								display: block
+								left: 50%
+								transform: translateX(-50%)
+								+faws('\f0de', $faf, 900)
