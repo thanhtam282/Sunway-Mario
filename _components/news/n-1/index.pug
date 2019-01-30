@@ -2,3 +2,13 @@ section.sunway-news-1
 	.container
 		.row
 			.col
+				.wrapper-news
+					- for ( var x=1 ; x < 7; x++)
+						a(href="/news-detail.html")
+							figure
+								.boxzoom
+									img(src='./img/home/news_1.jpg', alt='')
+								figcaption
+									time 23/23/2003
+									h3 Pristine Antarctic fjords contain similar levels of microplastics to open oceans
+		include ../../pagination/p-1/index

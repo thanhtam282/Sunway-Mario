@@ -1,1 +1,44 @@
 .sunway-news-1
+	padding-bottom: r(80px)
+	@media screen and (max-width: 992px)
+		padding-bottom: r(30px)
+.wrapper-news
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -10px
+	a
+		flex: 0 0 100%
+		@media screen and (min-width: 576px)
+			flex: 0 0 50%
+		@media screen and (min-width: 992px)
+			flex: 0 0 33.3333%
+		figure
+			padding: 0 10px
+			margin-top: 1.5rem
+			@media screen and (min-width: 576px)
+				margin-top: 1rem
+			.boxzoom
+				img
+					transform: scale(1.001)
+
+					transition: .5s all ease-in-out
+					width: 100%
+					max-height: r(230px)
+			figcaption
+				padding: r(30px)
+				background: #fafafa
+				time
+					font-size: r(14px)
+					color: color-get($mau,text-9)
+				h3
+					height: r(80px)
+					font-weight: 500
+					+line(3)
+					padding-top: .5rem
+					font-size: 1rem
+					color: color-get($mau,main)
+		&:hover
+			@media screen and (min-width: 992px)
+				.boxzoom
+					img
+						transform: scale(1.1)

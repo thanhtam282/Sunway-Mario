@@ -1,0 +1,36 @@
+.pages
+	margin-top: r(40px)
+	.pagination
+		margin-bottom: 1rem
+		justify-content: center
+		display: flex
+		list-style: none
+		li
+			+ li
+				margin-left: 10px
+			a, span
+				text-decoration: none
+				color: #999999
+				padding: .25rem .5rem
+				+wh(r(30px))
+				font-size: r(13px)
+				background: #fafafa
+				transition: .3s all ease-in-out
+				+f-center
+				em
+					font-size: r(20px)
+				&:hover
+					span 
+						color: color-get($mau,trang)
+						background: color-get($mau, main)
+					color: color-get($mau,trang)
+					background: color-get($mau, main)
+			span
+				padding: 0
+			&.active
+				a, span
+					color: color-get($mau,trang)
+					background: color-get($mau, main)
+					
+
+					
