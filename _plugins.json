@@ -1,7 +1,8 @@
 {
 	"css": [
 		"_plugins/grid.css",
-		"_plugins/rev.css/*.css"
+		"_plugins/rev.css/*.css",
+		"bower_components/swiper/dist/css/swiper.min.css"
 	],
 	"js": [
 		"bower_components/jquery/dist/jquery.min.js",
@@ -16,7 +17,8 @@
 		"_plugins/rev.extensions/revolution.extension.kenburn.min.js",
 		"_plugins/rev.extensions/revolution.extension.parallax.min.js",
 		"_plugins/rev.extensions/revolution.extension.migration.min.js",
-		"_plugins/rev.extensions/revolution.extension.video.min.js"
+		"_plugins/rev.extensions/revolution.extension.video.min.js",
+		"bower_components/swiper/dist/js/swiper.min.js"
 	],
 	"font": [
 		"bower_components/mdi/fonts/*",

@@ -1,0 +1,48 @@
+.sunway-about-us-2
+	padding: r(80px) 0
+	@media screen and (max-width: 992px)
+		padding: r(30px) 0
+	.wrapper
+		display: flex
+		flex-wrap: wrap
+		@media screen and (min-width: 992px)
+			margin: 0 -9px
+		figure
+			background: color-get($mau, trang)
+			border-radius: 8px
+			padding: 1.5rem
+			flex: 0 0 100%
+			@media screen and (min-width: 992px)
+				flex: initial
+				width: calc(33.333% - 18px)
+				margin: 0 9px
+				padding: r(50px) r(40px) r(60px)
+
+			+ figure
+				@media screen and (max-width: 992px)
+					margin-top: r(20px)
+			.boxzoom
+				display: flex
+				justify-content: center
+				margin-bottom: 1rem
+				@media screen and (min-width: 992px)
+					margin-bottom: r(20px)
+
+				img
+					object-fit: contain
+					max-width: 100%
+			figcaption
+				text-align: center
+				h3
+					text-transform: uppercase
+					color: color-get($mau,extra)
+					font-size: r(18px)
+					font-weight: 600
+					padding-bottom: r(20px)
+					@media screen and (min-width: 992px)
+						padding-bottom: r(20px)
+				p 
+					text-align: left
+					font-size: r(15px)
+					font-weight: 300
+					color: color-get($mau,main)

@@ -7,6 +7,7 @@ body, html
 p ,ul ,h1,h2,h3,h4,h5,h6,figure,div, *
 	margin: 0
 	padding: 0
+	font-weight: normal
 	
 html.hide
 	overflow: hidden
@@ -19,18 +20,20 @@ main
 		padding-top: r(42px)
 	@media screen and (max-width: 991px )
 		padding-top: r(42px)
-
+.mx-auto
+	margin-left: auto
+	margin-right: auto
 
 @media screen and (min-width: 1368px )
 	.container
 		max-width: 1240px
 
 
-=h-title($color: main)
-	font-size: r(30px)
-	text-transform: uppercase
-	font-weight: 600
-	color: color-get($mau,$color)
-	@media screen and (max-width: 992px)
-		font-size: 1.2rem
+a
+	&:hover
+		text-decoration: none
+.boxzoom
+	overflow: hidden
 
+.btn-more
+	+btn-more

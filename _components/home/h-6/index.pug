@@ -1,4 +1,14 @@
-section.sunway-
+section.sunway-home-6
 	.container
+		h2 Partners
 		.row
 			.col
+				.swiper-button-prev
+					span.mdi.mdi-chevron-left
+				.swiper-button-next
+					span.mdi.mdi-chevron-right
+				.swiper-container
+					.swiper-wrapper
+						- for ( var x = 1; x < 7; x++)
+							.swiper-slide
+								img(src='./img/home/partner_'+x+'.png', alt='')

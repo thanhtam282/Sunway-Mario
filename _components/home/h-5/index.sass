@@ -1,1 +1,97 @@
-.sunway-
+.sunway-home-5
+	padding: r(90px) 0
+	@media screen and (max-width: 992px)
+		padding: r(30px) 0
+	h2
+		width: 100%
+		+h-title(trang)
+		padding-bottom: r(30px)
+	a
+		figure
+			.boxzoom
+				height: 100%
+				display: flex
+				img
+					transform: scale(1.001)
+					width: 100%
+					object-fit: cover
+					transition: .5s all ease-in-out
+			figcaption
+				background: color-get($mau, trang)
+				padding: 1rem
+				@media screen and (min-width: $sm)
+					padding: r(30px)
+				time
+					color: color-get($mau,text-9)
+					font-size: r(14px)
+				h3 
+					transition: .3s all ease-in-out
+					color: color-get($mau,main)
+
+					font-weight: 600
+				p 
+					transition: .3s all ease-in-out
+					padding-top: .25rem
+					color: color-get($mau,text-6)
+					font-size: r(15px)
+					+line(2)
+					height: r(52px)
+		&:hover
+			@media screen and (min-width: 992px)
+				.boxzoom
+					img
+						transform: scale(1.1)
+				figcaption
+					h3, p
+						opacity: .9
+	.main
+		figure
+			display: flex
+			flex-direction: column
+			height: 100%
+			img
+				height: 100%
+			figcaption
+				h3
+					font-size: 1.2rem
+					height: r(50px)
+					+line(2)
+					line-height: r(24px)
+
+					@media screen and (min-width: 992px)
+						font-size: r(20px)
+						line-height: r(24px)
+						height: r(60px)
+	.sub
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		margin-top: r(30px)
+		@media screen and (min-width: 992px)
+			margin-top: 0
+		a
+			figure
+				display: flex
+				flex-wrap: wrap
+				@media screen and (min-width: 992px)
+				.boxzoom
+					flex: 0 0 100%
+					@media screen and (min-width: $sm)
+						flex: 0 0 50%
+				figcaption
+					flex: 0 0 100%
+					@media screen and (min-width: $sm)
+						
+						flex: 0 0 50%
+
+					h3
+						height: r(65px)
+						margin-top: .5rem
+						+line(3)
+						font-size: .9rem
+						@media screen and (min-width: $sm)
+							height: r(75px)
+							font-size: 1rem
+			+ a
+				figure
+					margin-top: r(30px)

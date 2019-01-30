@@ -1,4 +1,15 @@
-section.sunway-
-	.container
-		.row
-			.col
+section.sunway-home-4
+	.swiper-button-prev
+		span.mdi.mdi-chevron-left
+	.swiper-button-next
+		span.mdi.mdi-chevron-right
+	.swiper-container
+		.swiper-wrapper
+			- for ( var x = 1; x < 7; x++)
+				.swiper-slide
+					a(href="#")
+						figure
+							.boxzoom
+								img(src='./img/home/item_1.jpg', alt='')
+							figcaption
+								h3 Sandwich

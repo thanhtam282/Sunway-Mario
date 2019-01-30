@@ -49,10 +49,6 @@ var header = {
 	}
 }
 
-$(document).ready(function () {
-	header.init();
-
-});
 
 // $(windown).scroll(function () { 
 

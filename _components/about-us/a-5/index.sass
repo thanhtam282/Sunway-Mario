@@ -1,0 +1,38 @@
+.sunway-about-us-5
+	// padding-top: r(90px)
+	padding-bottom: r(100px)
+	@media screen and (max-width: 992px)
+		padding: r(30px) 0
+	h2
+		+h-title(main)
+		font-size: r(36px)
+		padding-bottom: r(30px)
+
+	.swiper-pagination
+		left: 50%
+		transform: translateX(-50%)
+		min-width: 5rem
+		justify-content: space-between
+		display: flex
+		margin: 0 -5px
+		bottom: 0
+		@media screen and (min-width: 992px)
+			bottom: -2rem
+		.swiper-pagination-bullet 
+			padding: 0 5px
+			+wh(15px)
+			&:hover, &:active, &:focus
+				outline: none
+			&.swiper-pagination-bullet-active
+				box-shadow: 0px 0px 0px 2px color-get($mau,main) inset
+				background: color-get($mau, trang)
+	.swiper-container
+		.swiper-slide
+			margin-top: auto
+			margin-bottom: auto
+			padding: r(30px)
+			+f-center
+			box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.04)
+			
+			img
+				max-width: 100%

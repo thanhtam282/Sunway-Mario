@@ -1,0 +1,11 @@
+section.sunway-about-us-5
+	.container
+		h2 Partners
+		.row
+			.col
+				.swiper-pagination
+				.swiper-container
+					.swiper-wrapper
+						- for ( var x = 1; x < 5; x++)
+							.swiper-slide
+								img(src='./img/about_us/certificate_'+x+'.png', alt='')
