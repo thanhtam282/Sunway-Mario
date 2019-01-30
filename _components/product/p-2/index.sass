@@ -1,0 +1,69 @@
+.sunway-product-2
+	padding: r(30px) 0
+	@media screen and (min-width: 992px)
+		padding: r(80px) 0
+	h2
+		+h-title(main)
+		padding-bottom: 1.2rem
+	.wrapper
+		margin: 0 -5px
+		display: flex
+		flex-wrap: wrap
+		figure
+			display: flex
+			flex-wrap: wrap
+			padding: 0 5px
+			position: relative
+			flex: 0 0 100%
+			@media screen and (min-width: 992px)
+				flex: 0 0 50%
+
+			.boxzoom
+				flex: 0 0 100%
+				@media screen and (min-width: 576px)
+					flex: 0 0 50%
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+			figcaption
+				position: relative
+				flex: 0 0 100%
+				overflow: hidden
+				background: #dddbe2
+				padding: 1.5rem 1rem
+				@media screen and (min-width: 576px)
+					flex: 0 0 50%
+				@media screen and (min-width: 992px)
+					padding: r(60px) 1rem r(90px)
+					// height: calc(100% + 42px)
+				h3
+					color: color-get($mau,text-3)
+					font-size: r(20px)
+					font-weight: 500
+					text-transform: uppercase
+					padding-bottom: .5rem
+				p
+					color: color-get($mau,text-6)
+					font-size: r(15px)
+					height: r(110px)
+					+line(5)
+				.btn-more
+					min-width: r(150px)
+					font-size: r(13px)
+					display: table
+					// margin-top: 2rem
+					background: color-get($mau, main)
+					height: 30px
+					line-height: r(30px)
+					@media screen and (min-width: $sm)
+						position: absolute
+						bottom: r(50px)
+			+ figure
+				@media screen and (max-width: 992px)
+					margin-top: 1.5rem
+
+
+
+
+

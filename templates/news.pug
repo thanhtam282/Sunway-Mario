@@ -1,0 +1,13 @@
+extends _layout.pug
+
+block var
+	- title = 'Home'
+	- bodyClass = 'news-page'
+
+block main
+	include ../_components/banner/b-1/index
+	include ../_components/breadcrumb/b-1/index
+
+	include ../_components/home/h-5/index-news
+	include ../_components/news/n-1/index
+

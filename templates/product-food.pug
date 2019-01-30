@@ -1,0 +1,12 @@
+extends _layout.pug
+
+block var
+	- title = 'Home'
+	- bodyClass = 'product-page'
+
+block main
+	include ../_components/banner/b-1/index
+	include ../_components/breadcrumb/b-1/index
+
+	include ../_components/product/p-2/index
+

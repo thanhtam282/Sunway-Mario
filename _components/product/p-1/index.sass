@@ -1,0 +1,63 @@
+.sunway-product-1
+	padding: r(30px) 0
+	@media screen and (min-width: 992px)
+		padding: r(80px) 0
+	h2
+		+h-title(main)
+		padding-bottom: 1.2rem
+	.wrapper
+		margin: 0 -11px
+		display: flex
+		flex-wrap: wrap
+		a
+			padding: 0 11px
+			flex: 0 0 100%
+			margin-top: 1.5rem
+			@media screen and (min-width: 550px)
+				flex: 0 0 50%
+			.bg-img
+				position: relative
+				overflow: hidden
+				img
+					width: 100%
+				&:after
+					margin: 0 11px
+					display: block
+					position: absolute
+					width: 120%
+					height: 200%
+					background: rgba(10,103,176,.55)
+					left: 50%
+					transform: translateX(-50%)
+					top: 100%
+					transition: 1s all ease-in-out
+					content: ''
+					border-radius: 50%
+					// border-top-right-radius: 50%
+				&:before
+					z-index: 2
+					+mtrl('\f419')
+					font-size: 5rem
+					transition: 1s all ease-in-out
+					transition-delay: .2s
+					bottom: 100%
+					+wh(100%)
+					color: color-get($mau,trang)
+					position: absolute
+					+f-center
+
+				
+			&:hover
+				@media screen and (min-width: 992px)
+					.bg-img
+						&:after
+							top: -50%
+						&:before
+							bottom: 0
+			@media screen and (max-width: 991px)
+				.bg-img
+					&:after
+						top: -50%
+					&:before
+						font-size: 3rem
+						bottom: 0
