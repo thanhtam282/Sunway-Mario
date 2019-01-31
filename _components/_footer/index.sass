@@ -13,6 +13,10 @@ footer
 		&:before
 			+mtrl('\f1ee')
 			margin-right: 5px
+		span
+			font-weight: 500
+			color: rgba(255,255,255,0.8)
+
 	.address
 		display: flex
 		&:before
@@ -24,6 +28,10 @@ footer
 		content: '\f42a'
 	.contact:before
 		content: '\f004'
+	.mail
+		margin-top: 30px
+		+ .mail
+			margin-top: 0
 	h3
 		text-transform: uppercase
 		color: color-get($mau,trang)
@@ -74,6 +82,8 @@ footer
 			padding: 6px r(19px)
 			border-top-left-radius:  5px
 			border-bottom-left-radius:  5px
+			@media screen and (min-width: 992px)
+				width: 100%
 			&:hover, &:active, &:focus
 				outline: none
 		::-webkit-input-placeholder
@@ -92,18 +102,43 @@ footer
 				font-size: 1.2rem
 				padding: 0 r(12px) 
 				color: color-get($mau,trang)
-	.social-wrapper
-		padding-top: 1rem
+	.wrapper
 		display: flex
-		margin: 0 -12px
-		a
-			padding: 0 r(12px)
-			transition: .3s all ease-in-out
-			color: color-get($mau,trang)
-			@media screen and (min-width: 992px)
-				color: rgba(255,255,255,.2)
-			&:hover
+		flex-wrap: wrap
+		padding-top: 2rem
+		margin: 0 -7px
+		.qr-code
+			padding: 0 7px
+			width: calc( 55% -7px )
+			// justify-content: flex-start
+			img
+				max-width: 100%
+				max-height: 150px
+				object-fit: contain
+		
+		.social-wrapper
+			padding: 0 7px
+			padding-right: 0
+			flex: 0 0 45%
+			display: flex
+			flex-direction: column
+			a
+				display: flex
+				background: #00000045
+				justify-content: space-between
+				align-items: center
+				padding: 5px 8px
+				font-size: 11px
+				transition: .3s all ease-in-out
+				color: color-get($mau,trang)
 				@media screen and (min-width: 992px)
-					color: color-get($mau,trang)
+					color: rgba(255,255,255,.6)
+				em
+					font-size: 1rem
+				&:nth-child(even)
+					background: #00000025
+				&:hover
+					@media screen and (min-width: 992px)
+						color: color-get($mau,trang)
 	section
 		margin-top: r(43px)

@@ -1,0 +1,76 @@
+.sunway-contact-1
+	padding: r(30px) 0
+	@media screen and (min-width: 992px)
+		padding: r(80px) 0
+	.intro
+		padding-bottom: 30px
+		h1
+			+h-title(main)
+			padding-bottom: 30px
+		p
+			text-align: center
+			font-size: 18px
+			color: color-get($mau,text-9)
+
+	.info
+		display: flex
+		flex-direction: column
+		height: 100%
+		justify-content: center
+		img
+			max-width: 100%
+			object-fit: contain
+			margin-bottom: 1.5rem
+		h3
+			color: color-get($mau,main)
+			text-transform: uppercase
+			font-weight: 600
+			font-size: r(15px)
+			padding-bottom: .5rem
+		p
+			font-size: r(14px)
+			padding-bottom: .25rem
+			color: color-get($mau,text-3)
+			&:before
+				color: color-get($mau,main)
+				+mtrl('\f1ee')
+				margin-right: 5px
+		.address
+			display: flex
+			&:before
+				padding-top: 3px
+				content: '\f34e'
+		.phone:before
+			content: '\f3f2'
+		.fax:before
+			content: '\f42a'
+	.wrap-form
+		> div[id]
+			display: flex
+			flex-wrap: wrap
+			margin: 0 -10px
+			.form-group
+				flex: 0 0 50%
+				padding: 0 10px
+				margin-top: 1rem
+				width: 100%
+				input, textarea
+					padding: 1rem
+					transition: .3s all ease-in-out
+					font-size: r(15px)
+					width: 100%
+					border: 1px solid #ebebeb
+					color: color-get($mau,text-3)
+					&:hover, &:active, &:focus
+						outline: none
+						border: 1px solid color-get($mau,main)
+						box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.35)
+						
+				::-webkit-input-placeholder
+					font-weight: 300
+					font-size: r(15px)
+					font-weight: 300
+					font-style: italic
+					color: #ebebeb
+			.qparagraph 
+				flex: 0 0 100%

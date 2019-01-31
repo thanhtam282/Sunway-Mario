@@ -1,1 +1,48 @@
-.sunway-
+.sunway-career-3
+	padding-top: r(103px)
+	padding-bottom: r(80px)
+	h2
+		+h-title(main)
+	.table-responsive
+		overflow: auto
+
+		table
+			margin-top: r(50px)
+			width: 100%
+			thead
+				background: color-get($mau, main)
+				color: color-get($mau,trang)
+				text-transform: uppercase
+				font-size: 1rem
+				tr
+					td
+						padding: 1rem 2rem
+						white-space: nowrap
+						+ td
+							text-align: center
+						&:first-child
+							width: 30%
+			tbody
+				border: 2px solid #ebebeb
+				border-top: 0
+				tr
+					transition: .3s all ease-in-out
+					td
+						white-space: nowrap
+						padding: 1rem 2rem
+						a
+							color: color-get($mau,text-3)
+						+ td 
+							text-align: center
+						&:first-child
+							width: 30%
+					&:nth-child(odd)
+						background: lighten(color-get($mau,main), 60%)
+					&:nth-child(even)
+						background: color-get($mau, trang)
+					&:hover
+						box-shadow: 2px 2px 5px 5px rgba(0,0,0,.08)
+
+						td
+							a
+								text-decoration: underline

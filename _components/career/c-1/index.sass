@@ -1,1 +1,39 @@
 .sunway-career-1
+	padding-top: r(80px)
+	padding-bottom: r(75px)
+	@media screen and (max-width: 992px)
+		padding: r(30px) 0
+	figure
+		display: flex
+		flex-wrap: wrap
+		flex-direction: row-reverse
+		@media screen and (max-width: 992px)
+			flex-wrap: wrap-reverse
+		.boxzoom
+			flex: 0 0 100%
+			margin-top: 1rem
+			@media screen and (min-width: 992px)
+				margin-top: 0
+				flex: 0 0 50%
+			+f-center()
+			img
+				transition: .5s all ease-in-out
+			&:hover
+				@media screen and (min-width: 992px)
+					img
+						transform: scale(1.1)
+		figcaption
+			flex: 0 0 100%
+			@media screen and (min-width: 992px)
+				flex: 0 0 50%
+				padding-right: 2rem
+			@media screen and (min-width: 1200px)
+				padding-right: 100px
+
+			h1
+				+h-title(main)
+				text-align: left
+				padding-bottom: r(30px)
+			p 
+				font-size: r18px
+				color: color-get($mau,text-3)
