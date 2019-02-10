@@ -164,6 +164,15 @@ header
 								left: 50%
 								transform: translateX(-50%)
 								+faws('\f0de', $faf, 900)
+	@media screen and (max-width: 1368px)
+		.menu-bar
+			.nav_wrapper
+				.bottom_nav
+					ul
+						li
+							padding: r(10px) r(50px)
+							&:first-child
+								padding-left: r(50px)
 	@media screen and (max-width: 1199px)
 		.menu-bar
 			.nav_wrapper
