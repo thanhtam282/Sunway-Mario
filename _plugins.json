@@ -2,6 +2,9 @@
 	"css": [
 		"_plugins/grid.css",
 		"_plugins/rev.css/*.css",
+		"bower_components/slick-carousel/slick/slick-theme.css",
+		"bower_components/slick-carousel/slick/slick.css",
+		"bower_components/fancybox/dist/jquery.fancybox.min.css",
 		"bower_components/swiper/dist/css/swiper.min.css"
 	],
 	"js": [
@@ -18,6 +21,9 @@
 		"_plugins/rev.extensions/revolution.extension.parallax.min.js",
 		"_plugins/rev.extensions/revolution.extension.migration.min.js",
 		"_plugins/rev.extensions/revolution.extension.video.min.js",
+		"_plugins/imageMapResizer.min.js",
+		"bower_components/fancybox/dist/jquery.fancybox.js",
+		"bower_components/slick-carousel/slick/slick.min.js",
 		"bower_components/swiper/dist/js/swiper.min.js"
 	],
 	"font": [

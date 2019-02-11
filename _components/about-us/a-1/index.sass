@@ -14,12 +14,13 @@
 		right: 0
 		height: 100%
 		transition: .3s all ease-in-out
-		content: url('../img/home/bg_2.png')
-		@media screen and (max-width: 1200px)
-			opacity: .2
-		@media screen and (max-width: 992px)
-			+f-center
-			width: 100%
+		// content: url('../img/home/bg_3.png')
+		// @media screen and (max-width: 1200px)
+		// 	opacity: .2
+		// 	display: none
+		// @media screen and (max-width: 992px)
+		// 	+f-center
+		// 	width: 100%
 	h2
 		+h-title(main) 
 		padding-bottom: 1rem
@@ -65,3 +66,30 @@
 			display: block
 			font-size: r(15px)
 			color: color-get($mau,main)
+	.img_mobile
+		// display: none
+		img
+			width: 100%
+		// @media screen and (max-width: 1200px)
+		// 	display: block
+	// a
+	// 	position: absolute
+	// 	bottom: 20rem
+	// 	left: 9rem
+	// 	padding: 1rem
+	// 	display: block
+	// 	&:after
+	// 		background: rgba(255,255,255,0.5)
+	// 		position: absolute
+	// 		top: 50%
+	// 		left: 50%
+	// 		transform: translate(-50% , -50%)
+	// 		display: block
+	// 		width: 500%
+	// 		height: 500%
+	// 		content: ''
+
+	// 	&:last-child
+	// 		left: auto
+	// 		bottom: 1.5rem
+	// 		right: -5rem

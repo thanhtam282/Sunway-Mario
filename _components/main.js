@@ -133,7 +133,79 @@ var slider = {
 			}
 		})
 	},
+	// product_detail_1: () => {
+	// 	let product_detail_1 = new Swiper('.sunway-product-detail-1 .swiper-container', {
+	// 		slidesPerView: 3,
+	// 		spaceBetween: 10,
+	// 		direction: 'vertical',
+	// 		autoHeight: true,
+	// 		// autoplay: {
+	// 		// 	delay: 5000,
+	// 		// 	disableOnInteraction: false,
+	// 		// },
+	// 		loop: true,
+	// 		// autoHeight: false,
+	// 		navigation: {
+	// 			nextEl: '.sunway-product-detail-1 .swiper-button-next',
+	// 			prevEl: '.sunway-product-detail-1 .swiper-button-prev',
+	// 		},
+	// 		breakpoints: {
+	// 			// when window width is <= 320px
+	// 			400: {
+	// 				slidesPerView: 1,
+	// 			},
+	// 			// when window width is <= 640px
+	// 			600: {
+	// 				slidesPerView: 2,
+	// 			},
+	// 			768: {
+	// 				slidesPerView: 3,
+	// 			},
+	// 			992: {
+	// 				slidesPerView: 3,
+	// 			}
+	// 		}
+	// 	})
+	// },
+	product_detail_1: () => {
+		$('.sunway-product-detail-1 .slider-sub').not('.slick-initialized').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			arrows: true,
+			dots: false,
+			adaptiveHeight: true,
+			fade: false,
+			infinite: true,
+			autoplay: false,
+			vertical: true,
+			focusOnSelect: true,
+			asNavFor: '.slider-main',
+			responsive: [{
+				breakpoint: 992,
+				settings: {
+					vertical:false,
+				}
+			}, ]
+		});
+		$('.sunway-product-detail-1 .slider-main').not('.slick-initialized').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: false,
+			adaptiveHeight: true,
+			fade: true,
+			infinite: true,
+			autoplay: false,
+			asNavFor: '.slider-sub',
+			responsive: [{
+				breakpoint: 767,
+				settings: {
+					arrows: false,
+				}
+			}, ]
+		});
 
+	},
 
 	init: () => {
 		slider.home_slider_1();
@@ -141,6 +213,7 @@ var slider = {
 		slider.about_slider_1();
 		slider.about_slider_1_sub();
 		slider.about_slider_2();
+		slider.product_detail_1();
 	}
 }
 
@@ -176,7 +249,14 @@ $(document).ready(() => {
 		delay: 3000,
 		gridHeight: "auto"
 	});
-
+	$(".sunway-about-us-1 map").imageMapResize()
+	$(".sunway-about-us-1 map .link1").click(function () {
+		$('.link_des_1').trigger("click")
+		
+	})
+	$(".sunway-about-us-1 map .link2").click(function () {
+		$('.link_des_2').trigger("click")
+	})
 });
 
 $(window).resize(function () {

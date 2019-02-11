@@ -1,0 +1,13 @@
+extends _layout.pug
+
+block var
+	- title = 'Home'
+	- bodyClass = 'product-detail-page'
+
+block main
+	include ../_components/banner/b-1/index
+	include ../_components/breadcrumb/b-1/index
+
+	include ../_components/product-detail/pd-1/index
+	include ../_components/home/h-4/index
+

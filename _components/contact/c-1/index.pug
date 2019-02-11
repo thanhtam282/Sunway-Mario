@@ -5,8 +5,8 @@ section.sunway-contact-1
 			p Please fill out the form and submit your comments and questions to Sunway Mario.
 			p We will respond to your email as soon as possible.
 		.row
-			.col-lg-4(bg-img='./img/contact/bg_1.jpg')
-				.info
+			.col-lg-4
+				.info(bg-img='./img/contact/bg_1.jpg')
 					img(src="./img/_global/logo.png", alt="")
 					h3 Sunway Mario Plastics Company Limited
 					p.address E9/58A An Phu Tay - Hung Long St., Hung Long Ward, Binh Chanh District, HCMC, Vietnam
@@ -26,3 +26,24 @@ section.sunway-contact-1
 							input( type="text" placeholder="Tiêu đề")
 						.form-group.qparagraph 
 							textarea(name="Nội dung",placeholder="Nội dung",  rows="8")
+					.frm-captcha
+						.frm-captcha-input
+							label.label
+								| Nhập mã hiển thị
+							input( maxlength="5" placeholder="Nhập mã hiển thị")
+						.RadCaptcha(style="width:50%;")
+							span(style="visibility:hidden;") Mã không đúng.
+							#ctl00_mainContent_ctl04_captcha_SpamProtectorPanel
+								#ctl00_mainContent_ctl04_captcha_ctl01
+									img(alt=""  style="height:50px;width:180px;display:block;")
+									a.rcRefreshImage(title="Hình ảnh mới" href="#" style="display:block;") Hình ảnh mới
+							input( type="hidden")
+					#ctl00_mainContent_ctl04_up1(style="display:none;")
+						img(src="/Data/SiteImages/indicators/indicator1.gif" alt=" ")
+					.frm-btnwrap
+						label.label  
+						.frm-btn
+							input.frm-btn-submit(type="submit" name="ctl00$mainContent$ctl04$btnSubmit" value="Gửi" )
+							input.frm-btn-reset(name="ctl00$mainContent$ctl04$btnReset" type="reset" value="Xóa")
+							input#ctl00_mainContent_ctl04_hdnResponseSetGuid(type="hidden" name="ctl00$mainContent$ctl04$hdnResponseSetGuid")
+					.clear

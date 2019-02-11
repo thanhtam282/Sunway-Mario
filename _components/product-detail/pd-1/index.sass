@@ -1,0 +1,156 @@
+.sunway-product-detail-1
+	padding: r(80px) 0
+	@media screen and (max-width: 992px)
+		padding: r(30px) 0
+	.wrapper
+		height: 100%
+		@media screen and (max-width: 992px)
+			display: flex
+			flex-direction: column-reverse
+	.slider-sub
+		+f-center
+		position: relative
+		margin-top: 1.5rem
+		max-height: 80px
+		@media screen and (min-width: 992px)
+			max-height: none
+			margin-top: 0
+			height: 100%
+			float: left
+			width: 125px
+		.slick-list
+			max-height: 80px
+			width: calc( 100% - 30px)
+			margin: 0 -5px
+			@media screen and (min-width: 992px)
+				// margin: initial
+				width: auto
+				max-height: none
+			// margin-bottom: -10px
+			.slick-slide
+				max-height: 80px
+				padding: 0 5px
+				@media screen and (min-width: 992px)
+					padding: initial
+					padding: 5px 0
+					max-height: none
+				// margin: 5px 0
+				position: relative
+				&:hover, &:active, &:focus
+					outline: none
+				&:after
+					position: absolute
+					display: block
+					transition: .3s all ease-in-out
+					width: 100%
+					content: ''
+					background: rgba(0,0,0,0.6)
+					height: calc(100% - 10px)
+					top: 5px
+					@media screen and (max-width: 992px)
+						top: 0
+						height: 100%
+						width: calc(100% - 10px)
+				&.slick-current
+					&:after
+						box-shadow: 0px 0px 0px 2px color-get($mau,main) inset
+						background: none
+
+				img
+					width: 100%
+					max-height: 80px
+					object-fit: cover
+					@media screen and (min-width: 992px)
+						max-height: none
+		.slick-prev
+			left: -5px
+			@media screen and (min-width: 992px)
+				position: absolute
+				top: 0
+				left: 50%
+				transform: translateX(-50%)
+			&:before
+				+faws('\f053', $faf, 900)
+				@media screen and (min-width: 992px)
+					+faws('\f077', $faf, 900)
+				color: color-get($mau,text-3)
+		.slick-next
+			right: -5px
+			@media screen and (min-width: 992px)
+				position: absolute
+				bottom: 0
+				left: 50%
+				top: auto
+				transform: translateX(-50%)
+			&:before
+				+faws('\f054', $faf, 900)
+				@media screen and (min-width: 992px)
+					+faws('\f078', $faf, 900)
+				color: color-get($mau,text-3)
+				
+
+	.slider-main
+		@media screen and (min-width: 992px)
+			height: 100%
+			float: right
+			width: calc(100% - 135px)
+		.slick-list
+			@media screen and (min-width: 992px)
+				height: 100% !important
+			.slick-track
+				@media screen and (min-width: 992px)
+					height: 100% !important
+
+				
+				img
+					height: 100%
+					object-fit: cover
+					width: 100%
+
+	h1
+		+h-title(main)
+		text-align: left
+		padding-bottom: 1.2rem
+		margin-top: 2rem
+		@media screen and (min-width: 992px)
+			margin-top: 0
+			padding-left: r(50px)
+	.detail
+		padding: 1.2rem 0
+		border-top: 1px solid color-get($mau,text-e)
+		border-bottom: 1px solid color-get($mau,text-e)
+		@media screen and (min-width: 992px)
+			margin-left: r(50px)
+		p
+			color: color-get($mau,text-3)
+			font-weight: 600
+			font-size: r(15px)
+			line-height: r(40px)
+			span
+				font-weight: normal
+	.block-contact
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+		margin-top: r(40px)
+		@media screen and (min-width: $sm)
+			flex-direction: row
+		@media screen and (min-width: 992px)
+			margin-left: 50px
+		.btn-order
+			background: red
+			font-weight: 500
+			color: color-get($mau,trang)
+			padding: 0.5rem 1rem
+			position: relative
+			+f-center
+			span
+				margin-right: 1rem
+				font-size: 1.5rem
+		.social
+			background: #e1e1e1
+			color: color-get($mau,text-3)
+			padding: .5rem 1rem 
+			font-weight: 500
+			+f-center
+

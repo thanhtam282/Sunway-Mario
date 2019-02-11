@@ -1,0 +1,61 @@
+section.sunway-product-detail-1
+	.container
+		.row
+			//- .col-6
+			//- 	.swiper-button-prev
+			//- 		span.mdi.mdi-chevron-left
+			//- 	.swiper-button-next
+			//- 		span.mdi.mdi-chevron-right
+			//- 	.swiper-container
+			//- 		.swiper-wrapper
+			//- 			- for ( var x = 1; x < 7; x++)
+			//- 				.swiper-slide
+			//- 					a(href="#")
+			//- 						figure
+			//- 							.boxzoom
+			//- 								img(src='./img/product_detail/product_sub.jpg', alt='')
+			//- 							figcaption
+			.col-lg-6
+				.wrapper
+					.slider-sub
+						- for ( var x = 1; x < 7; x++)
+							.item
+								img(src='./img/product_detail/product_sub.jpg', alt='')
+					.slider-main
+						- for ( var x = 1; x < 7; x++)
+							.item
+								img(src='./img/product_detail/product_main.jpg', alt='')
+			.col-lg-6
+				h1 Drawstring garbage bag
+				.detail
+					p Material: 
+						span HDPE/ LLDPE
+					p Volume:
+						span 35, 60, 120 Liters…
+					p Application:
+						span office/ kitchen/ garden
+					p Color:
+						span optional
+					p Printing on bags:
+						span optional (1 color 1 side)
+					p Label:
+						span 4-6 colors printing
+					p Carton:
+						span display in white or brown with 4 colors printing
+					p Testing figures:
+						span Tensile strength, Elongation, Dart Drop
+				.block-contact
+					a(href="#").btn.btn-order
+						span.mdi.mdi-phone
+						| Order    (84.8) 5429-1168
+					.social.nav
+						p Share
+						.nav-item
+							.fb-share-button(data-href='', data-layout='button', data-size='small', data-mobile-iframe='true')
+								a.fb-xfbml-parse-ignore(target='_blank', href='') Chia sẻ
+						.nav-item
+							a.twitter-share-button(href='https://twitter.com/share', data-size='medium', data-text='custom share text', data-url='', data-via='twitterdev', data-related='twitterapi,twitter') Tweet
+						.nav-item
+							.g-plusone(data-size="tall")
+
+
