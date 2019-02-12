@@ -18,8 +18,11 @@ p ,ul ,h1,h2,h3,h4,h5,h6,figure,div, *
 		display: flex
 		flex-wrap: wrap
 
-.news-detail-page, .product-article-page
+.news-detail-page
 	.newsdetailpager
+		display: none
+.product-article-page
+	.newspager
 		display: none
 .edit-link
 	i
@@ -30,7 +33,7 @@ html.hide
 	overflow: hidden
 
 main
-	// overflow-x: hidden
+	overflow-x: hidden
 	padding-top: r(90px)
 	transition: .3s padding ease-in-out
 	&.active

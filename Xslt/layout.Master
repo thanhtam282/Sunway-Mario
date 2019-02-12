@@ -39,6 +39,11 @@ Facebook: https://fb.com/canhcam.vn
     <link rel="icon" type="image/png" sizes="96x96" href="/Data/Sites/1/skins/default/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/Data/Sites/1/skins/default/favicon/favicon-16x16.png">
     <link rel="manifest" href="/Data/Sites/1/skins/default/favicon/manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans:200,300,400,500,600,700&amp;subset=vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
     <meta name="msapplication-TileColor">
     <meta name="msapplication-TileImage" content="/Data/Sites/1/skins/default/favicon/ms-icon-144x144.png">
     <meta name="theme-color">

@@ -44,16 +44,41 @@
 							</a>
 							<div class="social nav">
 								<p>Share</p>
-								<div class="nav-item">
-									<div class="fb-share-button" data-href="" data-layout="button" data-size="small" data-mobile-iframe="true"><a
-										 class="fb-xfbml-parse-ignore" target="_blank" href="">Chia sẻ</a></div>
-								</div>
-								<div class="nav-item"><a class="twitter-share-button" href="https://twitter.com/share" data-size="medium"
-									 data-text="custom share text" data-url="" data-via="twitterdev" data-related="twitterapi,twitter">Tweet</a></div>
-								<div class="nav-item">
-									<div class="g-plusone" data-size="tall"></div>
-								</div>
+
+								<a class="fb-xfbml-parse-ignore" target="_blank">
+									<xsl:attribute name='href'>
+										<xsl:text>https://www.facebook.com/sharer/sharer.php?u=</xsl:text>
+										<xsl:value-of disable-output-escaping='yes' select='/NewsDetail/FullUrl'></xsl:value-of>
+										<xsl:text>&amp;src=sdkpreparse</xsl:text>
+									</xsl:attribute>
+									<img src="/Data/Sites/1/skins/default/img/_global/icon_facebook.png" alt="" />
+								</a>
+								<a class="fb-xfbml-parse-ignore" target="_blank">
+									<xsl:attribute name='href'>
+										<xsl:text>https://twitter.com/home?status=</xsl:text>
+										<xsl:value-of disable-output-escaping='yes' select='/NewsDetail/FullUrl'></xsl:value-of>
+										<xsl:text>&amp;src=sdkpreparse</xsl:text>
+									</xsl:attribute>
+									<img src="/Data/Sites/1/skins/default/img/_global/icon_twitter.png" alt="" />
+								</a>
+								<a class="fb-xfbml-parse-ignore" target="_blank">
+									<xsl:attribute name='href'>
+										<xsl:text>https://plus.google.com/share?url=</xsl:text>
+										<xsl:value-of disable-output-escaping='yes' select='/NewsDetail/FullUrl'></xsl:value-of>
+										<xsl:text>&amp;src=sdkpreparse</xsl:text>
+									</xsl:attribute>
+									<img src="/Data/Sites/1/skins/default/img/_global/icon_google.png" alt="" />
+								</a>
+								<a class="fb-xfbml-parse-ignore" target="_blank">
+									<xsl:attribute name='href'>
+										<xsl:text>https://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title=&amp;summary=&amp;source=</xsl:text>
+										<xsl:value-of disable-output-escaping='yes' select='/NewsDetail/FullUrl'></xsl:value-of>
+										<xsl:text>&amp;src=sdkpreparse</xsl:text>
+									</xsl:attribute>
+									<img src="/Data/Sites/1/skins/default/img/_global/icon_linkedin.png" alt="" />
+								</a>
 							</div>
+
 						</div>
 					</div>
 				</div>
@@ -73,26 +98,26 @@
 	</xsl:template>
 	<xsl:template match="NewsImages" mode="Thumbnail">
 		<div class="item">
-				<img>
-				<xsl:attribute name="src">
-					<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name="alt">
-					<xsl:value-of select="Title"></xsl:value-of>
-				</xsl:attribute>
-				</img>
+			<img>
+			<xsl:attribute name="src">
+				<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:attribute name="alt">
+				<xsl:value-of select="Title"></xsl:value-of>
+			</xsl:attribute>
+			</img>
 		</div>
 	</xsl:template>
 	<xsl:template match="NewsImages" mode="Image">
 		<div class="item">
-				<img>
-				<xsl:attribute name="src">
-					<xsl:value-of select="ImageUrl"></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name="alt">
-					<xsl:value-of select="Title"></xsl:value-of>
-				</xsl:attribute>
-				</img>
+			<img>
+			<xsl:attribute name="src">
+				<xsl:value-of select="ImageUrl"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:attribute name="alt">
+				<xsl:value-of select="Title"></xsl:value-of>
+			</xsl:attribute>
+			</img>
 		</div>
 	</xsl:template>
 	<xsl:template match="NewsOther">
