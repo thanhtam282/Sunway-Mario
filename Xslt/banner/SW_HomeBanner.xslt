@@ -22,7 +22,7 @@
   </xsl:template>
 
   <xsl:template match="Banner" mode="image">
-      <li data-transition="parallaxtoright">
+      <li data-transition="random">
         <img>
         <xsl:attribute name='src'>
           <xsl:value-of select='ImageUrl'></xsl:value-of>

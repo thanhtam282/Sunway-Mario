@@ -85,6 +85,13 @@
 			</div>
 		</section>
 		<section class="sunway-home-4">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h2>other product</h2>
+					</div>
+				</div>
+			</div>
 			<div class="swiper-button-prev"><span class="mdi mdi-chevron-left"></span></div>
 			<div class="swiper-button-next"><span class="mdi mdi-chevron-right"></span></div>
 			<div class="swiper-container">

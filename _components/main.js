@@ -133,40 +133,6 @@ var slider = {
 			}
 		})
 	},
-	// product_detail_1: () => {
-	// 	let product_detail_1 = new Swiper('.sunway-product-detail-1 .swiper-container', {
-	// 		slidesPerView: 3,
-	// 		spaceBetween: 10,
-	// 		direction: 'vertical',
-	// 		autoHeight: true,
-	// 		// autoplay: {
-	// 		// 	delay: 5000,
-	// 		// 	disableOnInteraction: false,
-	// 		// },
-	// 		loop: true,
-	// 		// autoHeight: false,
-	// 		navigation: {
-	// 			nextEl: '.sunway-product-detail-1 .swiper-button-next',
-	// 			prevEl: '.sunway-product-detail-1 .swiper-button-prev',
-	// 		},
-	// 		breakpoints: {
-	// 			// when window width is <= 320px
-	// 			400: {
-	// 				slidesPerView: 1,
-	// 			},
-	// 			// when window width is <= 640px
-	// 			600: {
-	// 				slidesPerView: 2,
-	// 			},
-	// 			768: {
-	// 				slidesPerView: 3,
-	// 			},
-	// 			992: {
-	// 				slidesPerView: 3,
-	// 			}
-	// 		}
-	// 	})
-	// },
 	product_detail_1: () => {
 		$('.sunway-product-detail-1 .slider-sub').not('.slick-initialized').slick({
 			slidesToShow: 3,
@@ -176,6 +142,7 @@ var slider = {
 			adaptiveHeight: true,
 			fade: false,
 			infinite: true,
+			centerMode: false,
 			autoplay: false,
 			vertical: true,
 			focusOnSelect: true,
@@ -214,6 +181,7 @@ var slider = {
 		slider.about_slider_1_sub();
 		slider.about_slider_2();
 		slider.product_detail_1();
+		$('.sunway-product-detail-1 .slider-sub .slick-list .slick-slide').css('height',  $('.sunway-product-detail-1 .slider-sub .slick-list .slick-slide').outerWidth())
 	}
 }
 
@@ -237,7 +205,19 @@ var set_height = {
 
 }
 
+function addClassByLocation() {
+	let i = window.location.pathname
+	if (i.search('products') > 0) {
+		$('.Module.Module-141 .nav .nav-item:nth-child(3) .nav-link ').addClass('active')
+	} else if (i.search('news-2') > 0) {
+		$('.Module.Module-141 .nav .nav-item:nth-child(4) .nav-link ').addClass('active')
 
+	} else if (i.search('career-1') > 0) {
+		$('.Module.Module-141 .nav .nav-item:nth-child(5) .nav-link ').addClass('active')
+	} else if (i.search('ho-tro-khach-hang') > 0) {
+		$('.Module.Module-141 .nav .nav-item:nth-child(5) .nav-link ').addClass('active')
+	}
+}
 
 $(document).ready(() => {
 	header.init();
@@ -247,7 +227,11 @@ $(document).ready(() => {
 		sliderType: "standard",
 		sliderLayout: "auto",
 		delay: 3000,
-		gridHeight: "auto"
+		gridHeight: "auto",
+		onHoverStop:"off",
+		navigation: {
+			onHoverStop: 'off'
+		}
 	});
 	$(".sunway-about-us-1 map").imageMapResize()
 	$(".sunway-about-us-1 map .link1").click(function () {
@@ -257,6 +241,19 @@ $(document).ready(() => {
 	$(".sunway-about-us-1 map .link2").click(function () {
 		$('.link_des_2').trigger("click")
 	})
+	if ($(window).width() < 992 ){
+		AOS.init({
+			disable: true
+		});
+		
+	} else {
+		
+		AOS.init({
+			duration: 1500,
+			disable: false
+		});
+	}
+	addClassByLocation();
 });
 
 $(window).resize(function () {

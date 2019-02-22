@@ -20,7 +20,11 @@
 	</xsl:template>
 
 	<xsl:template match="News">
-		<div class="swiper-slide">
+
+		<div class="swiper-slide" data-aos="fade-right" data-aos-delay="200">
+			<xsl:attribute name='data-aos-delay'>
+				<xsl:value-of select="position() * 200 - 200"></xsl:value-of>
+			</xsl:attribute>
 			<a>
 				<xsl:attribute name='href'>
 					<xsl:value-of select='Url'></xsl:value-of>

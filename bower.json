@@ -25,6 +25,7 @@
     "tiny-slider": "^2.9.1",
     "animate.css": "^3.7.0",
     "mdi": "^3.3.92",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "aos": "^2.3.4"
   }
 }

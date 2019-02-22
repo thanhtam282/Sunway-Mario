@@ -23,13 +23,13 @@
 
             </div>
             <div class="social-networks nav">
-              <div class="nav-item">
+              <div class="item">
                 <div class="fb-share-button" data-href="" data-layout="button" data-size="small" data-mobile-iframe="true"><a
                     class="fb-xfbml-parse-ignore" target="_blank" href="">Chia sẻ</a></div>
               </div>
-              <div class="nav-item"><a class="twitter-share-button" href="https://twitter.com/share" data-size="medium"
+              <div class="item"><a class="twitter-share-button" href="https://twitter.com/share" data-size="medium"
                   data-text="custom share text" data-url="" data-via="twitterdev" data-related="twitterapi,twitter">Tweet</a></div>
-              <div class="nav-item">
+              <div class="item">
                 <div class="g-plusone" data-size="tall"></div>
               </div>
             </div>
@@ -37,7 +37,7 @@
         </div>
         <div class="row">
           <div class="col">
-            <h2 class="title">tin tuc khac</h2>
+            <h2 class="title">other news</h2>
             <div class="wrapper-news">
               <xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
 

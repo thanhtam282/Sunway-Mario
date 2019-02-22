@@ -2,10 +2,16 @@
 .social-networks
 	margin-top: 2rem
 	display: flex
-	.nav-item
+	.item
 		margin-right: .5rem
 		+f-center()
 		.fb-share-button
 			display: flex
 		&:last-child
 			margin-right: 0
+		iframe
+			display: block !important
+	.fb-share-button
+		span
+			iframe
+				display: block !important

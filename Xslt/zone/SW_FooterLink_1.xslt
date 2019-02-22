@@ -18,7 +18,7 @@
 			<a >
 				<xsl:if test="IsActive='true'">
 					<xsl:attribute name="class">
-						<xsl:text>nav-link active</xsl:text>
+						<xsl:text>active</xsl:text>
 					</xsl:attribute>
 				</xsl:if>
 				<xsl:attribute name='href'>

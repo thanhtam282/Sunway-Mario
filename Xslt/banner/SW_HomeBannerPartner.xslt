@@ -30,7 +30,10 @@
 	</xsl:template>
 
 	<xsl:template match="Banner" mode="image">
-		<div class="swiper-slide">
+		<div class="swiper-slide" data-aos="flip-up" >
+					<xsl:attribute name='data-aos-delay'>
+				<xsl:value-of select="position() * 200 - 200"></xsl:value-of>
+			</xsl:attribute>
 			<img>
 			<xsl:attribute name='src'>
 				<xsl:value-of select='ImageUrl'></xsl:value-of>

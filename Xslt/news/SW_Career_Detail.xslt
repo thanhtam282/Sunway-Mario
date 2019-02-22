@@ -8,7 +8,7 @@
 		<section class="sunway-career-detail-1">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-8">
+					<div class="col-lg-7 col-xl-8">
 						<h1>
 							<xsl:value-of select='/NewsDetail/Title'></xsl:value-of>
 							<xsl:value-of select='/NewsDetail/EditLink' disable-output-escaping='yes'></xsl:value-of>
@@ -18,7 +18,7 @@
 
 						<a class="btn btn-more" href="#">apply now</a>
 					</div>
-					<div class="col-lg-4">
+					<div class="col-lg-5 col-xl-4">
 						<h2>Other career</h2>
 						<div class="table-responsive">
 							<table>

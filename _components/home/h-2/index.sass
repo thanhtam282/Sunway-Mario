@@ -5,27 +5,30 @@
 		padding: r(30px) 0
 	position: relative
 	overflow: hidden
-	&:after
-		position: absolute
-		top: 0
-		z-index: -1
-		display: block
-		width: 50%
-		right: 0
-		height: 100%
-		transition: .3s all ease-in-out
-		content: url('../img/home/bg_2.png')
-		@media screen and (max-width: 1200px)
-			opacity: .2
-		@media screen and (max-width: 992px)
-			+f-center
-			width: 100%
+	// &:after
+	// 	position: absolute
+	// 	top: 0
+	// 	z-index: -1
+	// 	display: block
+	// 	width: 50%
+	// 	right: 0
+	// 	height: 100%
+	// 	transition: .3s all ease-in-out
+	// 	content: url('../img/home/bg_2.png')
+	// 	@media screen and (max-width: 1200px)
+	// 		opacity: .2
+	// 	@media screen and (max-width: 992px)
+	// 		+f-center
+	// 		width: 100%
 	h2
 		+h-title(main) 
 		line-height: r(40px)
 		padding-bottom: 1rem
 		max-width: r(370px)
 		text-align: left
+		@media screen and (max-width: $sm)
+			font-size: 1.6rem
+			line-height: 1.4
 	p
 		font-weight: 300
 		color: color-get($mau,text-8)
@@ -65,3 +68,6 @@
 			font-size: r(15px)
 			font-weight: 300
 			color: color-get($mau,text-8)
+	.img_mobile
+		img
+			max-width: 100%

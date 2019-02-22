@@ -9,6 +9,17 @@
 		table
 			margin-top: r(50px)
 			width: 100%
+			position: relative
+			&:after
+				position: absolute
+				border: 2px solid #ebebeb
+				top: 0
+				z-index: 3
+				display: block
+				content: ''
+				width: 100%
+				height: 100%
+				border-top: 0
 			thead
 				background: color-get($mau, main)
 				color: color-get($mau,trang)
@@ -23,19 +34,25 @@
 						&:first-child
 							width: 30%
 			tbody
-				border: 2px solid #ebebeb
-				border-top: 0
+
 				tr
 					transition: .3s all ease-in-out
 					td
 						white-space: nowrap
 						padding: 1rem 2rem
+						@media screen and (max-width: 992px)
+							padding: 1rem
 						a
 							color: color-get($mau,text-3)
 						+ td 
+							padding-right: 0
 							text-align: center
 						&:first-child
 							width: 30%
+						&:last-child
+							padding-right: 2rem
+							@media screen and (max-width: 992px)
+								padding-right: 1rem
 					&:nth-child(odd)
 						background: lighten(color-get($mau,main), 60%)
 					&:nth-child(even)

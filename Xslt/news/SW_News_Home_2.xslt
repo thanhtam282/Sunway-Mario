@@ -27,7 +27,7 @@
 	<xsl:template match="News" mode="main">
 		<xsl:if test="position() = 1">
 			<xsl:text disable-output-escaping="yes">&lt;div class="row"&gt;</xsl:text>
-			<xsl:text disable-output-escaping="yes">&lt;div class="col-lg-6 main"&gt;</xsl:text>
+			<xsl:text disable-output-escaping="yes">&lt;div class="col-lg-6 main" data-aos="fade-right"&gt;</xsl:text>
 			<a>
 				<xsl:attribute name='href'>
 					<xsl:value-of select='Url'></xsl:value-of>
@@ -62,7 +62,7 @@
 		</xsl:if>
 		<xsl:if test="position() = 2 ">
 			<xsl:text disable-output-escaping="yes">&lt;/div &gt;</xsl:text>
-			<xsl:text disable-output-escaping="yes">&lt;div class="col-lg-6 sub"&gt;</xsl:text>
+			<xsl:text disable-output-escaping="yes">&lt;div class="col-lg-6 sub"  &gt;</xsl:text>
 		</xsl:if>
 		<xsl:if test="position() &gt; 1 and position() &lt; 5">
 			<a>
@@ -72,7 +72,10 @@
 				<xsl:attribute name='target'>
 					<xsl:value-of select='Target'></xsl:value-of>
 				</xsl:attribute>
-				<figure>
+				<figure data-aos-delay="200" data-aos="fade-up">
+							<xsl:attribute name='data-aos-delay'>
+				<xsl:value-of select="position() * 200 - 400"></xsl:value-of>
+			</xsl:attribute>
 					<div class="boxzoom">
 						<img>
 						<xsl:attribute name='src'>

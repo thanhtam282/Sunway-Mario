@@ -1,4 +1,9 @@
 section.sunway-home-4
+	.container
+		.row
+			.col
+				h2 other product
+
 	.swiper-button-prev
 		span.mdi.mdi-chevron-left
 	.swiper-button-next
@@ -6,7 +11,7 @@ section.sunway-home-4
 	.swiper-container
 		.swiper-wrapper
 			- for ( var x = 1; x < 7; x++)
-				.swiper-slide
+				.swiper-slide( data-aos="fade-right")
 					a(href="#")
 						figure
 							.boxzoom

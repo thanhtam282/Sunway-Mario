@@ -8,7 +8,7 @@
 		<section class="sunway-product-2">
 			<div class="container">
 				<h2>
-					<xsl:value-of select='/NewsList/ModuleTitle'></xsl:value-of>
+					<xsl:value-of select='/NewsList/ZoneTitle'></xsl:value-of>
 
 				</h2>
 				<div class="row">

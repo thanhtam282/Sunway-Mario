@@ -56,13 +56,21 @@
 			tbody
 				tr
 					position: relative
-					font-size: r(15px)
+					font-size: r(14px)
 					color: color-get($mau,text-3)
 					background: #fafafa
 					transition: .3s all ease-in-out
+					@media screen and (max-width: $sm)
+						font-size: 13px
 					td
 						white-space: nowrap
-						padding: r(30px) r(20px)
+						padding: r(30px) r(12px)
+						@media screen and (max-width: 1200px)
+							padding: r(30px) r(8px)
+						@media screen and (max-width: $sm)
+							padding: r(14px) r(8px)
+							padding-right: 0
+
 						&:first-child
 							padding-right: .5rem
 						span

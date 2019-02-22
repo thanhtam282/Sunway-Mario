@@ -1,5 +1,5 @@
 .sunway-product-detail-1
-	padding: r(80px) 0
+	padding: r(80px) 0 r(50px)
 	@media screen and (max-width: 992px)
 		padding: r(30px) 0
 	.wrapper
@@ -28,13 +28,14 @@
 				// margin: initial
 				width: auto
 				max-height: none
+				margin: 0
 			// margin-bottom: -10px
 			.slick-slide
 				max-height: 80px
 				padding: 0 5px
 				@media screen and (min-width: 992px)
 					padding: initial
-					padding: 5px 0
+					margin: 5px 0
 					max-height: none
 				// margin: 5px 0
 				position: relative
@@ -47,8 +48,8 @@
 					width: 100%
 					content: ''
 					background: rgba(0,0,0,0.6)
-					height: calc(100% - 10px)
-					top: 5px
+					height: 100%
+					top: 0
 					@media screen and (max-width: 992px)
 						top: 0
 						height: 100%
@@ -63,6 +64,7 @@
 					max-height: 80px
 					object-fit: cover
 					@media screen and (min-width: 992px)
+						height: 100%
 						max-height: none
 		.slick-prev
 			left: -5px
@@ -119,6 +121,7 @@
 		@media screen and (min-width: 1200px)
 			margin-top: 0
 			padding-left: r(50px)
+
 	.detail
 		padding: 1.2rem 0
 		border-top: 1px solid color-get($mau,text-e)
@@ -131,6 +134,7 @@
 			font-size: r(15px)
 			line-height: r(40px)
 			span
+				margin-left: 3px
 				font-weight: normal
 	.block-contact
 		display: flex
